@@ -9,18 +9,18 @@ import Newsletter from '../components/Newsletter';
 const Home = () => {
   return (
     <>
-    <section className="home-section" id="home">
-      <div className="content">
-        <h1>Welcome to SkillConnect</h1>
-        <p>Connecting skilled workers with the right job opportunities.</p>
-        <a href="#jobs" className="btn-explore">Explore Jobs</a>
-      </div>
-    </section>
-    <JobCategories/>
-    <HowItWorks/>
-    <WhyChooseUs/>
-    <Testimonials/>
-    <Newsletter/>
+      <section className="home-section" id="home">
+        <div className="content">
+          <h1>Welcome to SkillConnect</h1>
+          <p>Connecting skilled workers with the right job opportunities.</p>
+          <a href="#jobs" className="btn-explore">Explore Jobs</a>
+        </div>
+      </section>
+      <JobCategories />
+      <HowItWorks />
+      <WhyChooseUs />
+      <Testimonials />
+      <Newsletter />
     </>
   );
 };

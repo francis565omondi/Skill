@@ -237,23 +237,23 @@
 
 
 /* Homepage CSS (src/pages/Home.css) */
+/* Home.css or your relevant CSS file */
 .home-section {
-  min-height: 90vh;
+  background-image: url('./assets/images/homepage.png'); /* adjust the path if needed */
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* or any other height you prefer */
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to right, #004466, #007788); /* Background gradient */
-  color: white;
+  color: white; /* Adjust text color for contrast */
   text-align: center;
-  padding: 2rem;
-  flex-direction: column;
 }
 
 .content {
-  z-index: 2;
-  max-width: 700px; /* Limits the width of content */
-  margin: 0 auto;
+  z-index: 10;
 }
+
 
 .content h1 {
   font-size: 3rem;
