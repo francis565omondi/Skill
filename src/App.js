@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Navbar from './components/common/Navbar';
 import Footer from './components/common/Footer';
-import ScrollToTop from './components/ScrollToTop'; // ✅ Import it
+import ScrollToTop from './components/ScrollToTop';
 
 import Home from './pages/Home';
 import Jobs from './pages/Jobs';
@@ -16,9 +16,10 @@ import SignUp from './pages/SignUp';
 function App() {
   return (
     <Router>
-      <ScrollToTop /> {/* ✅ Must be outside <Routes> */}
-      <>
-        <Navbar />
+      <ScrollToTop />
+      <Navbar />
+      {/* ✅ Wrap main content in container */}
+      <div className="container">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/jobs" element={<Jobs />} />
@@ -27,8 +28,8 @@ function App() {
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
         </Routes>
-        <Footer />
-      </>
+      </div>
+      <Footer />
     </Router>
   );
 }
