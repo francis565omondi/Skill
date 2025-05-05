@@ -419,10 +419,18 @@
 
 
 .about-section {
-  display: flex;
-  justify-content: center;
+  background: linear-gradient(rgba(24, 113, 185, 0.4), rgba(0, 0, 0, 0.4)),
+              url('./assets/images/about.png'); /* Make sure the image path is correct */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  color: rgb(218, 191, 191);
   padding: 60px 20px;
-  background: #f9f9ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 .about-box {
@@ -430,8 +438,9 @@
   background: white;
   padding: 40px;
   border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 20px rgba(153, 126, 126, 0.1);
   text-align: center;
+  z-index: 2;
 }
 
 .about-box h2 {
@@ -610,7 +619,7 @@
 
 /* Contact CSS (src/pages/Contact.css) */
 .contact-section {
-  background: #f5f7fa;
+  background: url('./assets/images/about.png');
   padding: 60px 20px;
 }
 
