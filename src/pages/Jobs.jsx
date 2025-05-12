@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import Header from '../components/Header';
+
 import SearchBar from '../components/SearchBar';
 import Filters from '../components/Filters';
 import JobCategories from '../components/JobCategories';
-import JobLists from '../components/JobLists'; // This should render JobCards inside
-// Removed JobCards direct import — used inside JobLists
+import JobLists from '../components/JobLists';
 
 function Jobs() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -12,33 +11,52 @@ function Jobs() {
 
   return (
     <>
-      <Header />
-
-      <main className="jobs-page px-4 py-6">
-        {/* Top section with search bar */}
-        <div className="flex flex-col md:flex-row items-center justify-between mb-6">
-          <h2 className="text-2xl font-semibold mb-4 md:mb-0">Find Your Next Job</h2>
-          <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+      {/* Hero Section */}
+      <section className="hero-section">
+        <div className="hero-overlay">
+          <div className="hero-content glass-effect">
+            <h1 className="hero-title typing-text">Land Your Dream Job Today</h1>
+            <p className="hero-subtitle">
+              Discover thousands of job opportunities from top companies, tailored to your skills and interests.
+            </p>
+            <div className="hero-search-wrapper">
+              <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+            </div>
+          </div>
         </div>
+      </section>
 
-        {/* Job categories (cards/icons) */}
-        <div className="mb-6">
+      {/* Job Categories Section */}
+      <section className="jobs-categories">
+        <div className="jobs-categories-content">
+          <h2>Explore Job Categories</h2>
+          <p>Find jobs that match your skills and interests.</p>
           <JobCategories setSelectedCategory={setSelectedCategory} />
         </div>
+      </section>
 
-        {/* Main content with filters + job listings */}
-        <div className="flex flex-col md:flex-row gap-6">
-          {/* Left: Filters */}
-          <div className="w-full md:w-1/4">
+      {/* Filters and Listings Section */}
+      <section className="jobs-main">
+        <div className="jobs-main-content">
+          <aside className="jobs-filters">
+            <h3>Filter Jobs</h3>
             <Filters selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
-          </div>
-
-          {/* Right: Job listings rendered as cards */}
-          <div className="w-full md:w-3/4">
+          </aside>
+          <div className="jobs-listings">
+            <h3>Available Jobs</h3>
             <JobLists searchTerm={searchTerm} selectedCategory={selectedCategory} />
           </div>
         </div>
-      </main>
+      </section>
+
+      {/* Call to Action Section */}
+      <section className="jobs-cta">
+        <div className="jobs-cta-content">
+          <h2>Ready to Take the Next Step?</h2>
+          <p>Create your profile and start applying in minutes.</p>
+          <button>Get Started Now</button>
+        </div>
+      </section>
     </>
   );
 }
