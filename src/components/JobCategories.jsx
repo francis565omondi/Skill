@@ -1,7 +1,8 @@
 import React from 'react';
-
-import { FaBroom, FaTools, FaCar, FaBolt, FaBaby, FaLeaf, FaBriefcase } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { 
+  FaBroom, FaTools, FaCar, FaBolt, FaBaby, FaLeaf, FaBriefcase 
+} from 'react-icons/fa';
 
 const jobCategories = [
   {
@@ -74,7 +75,6 @@ const jobCategories = [
     icon: <FaCar />,
     route: '/jobs/logistics'
   }
-  
 ];
 
 const JobCategories = () => {
@@ -98,6 +98,15 @@ const JobCategories = () => {
             </div>
           </div>
         ))}
+      </div>
+
+      {/* Register Now CTA */}
+      <div className="register-cta">
+        <h3>Don't see your skill listed?</h3>
+        <p>Join now and get discovered by employers looking for talent like yours.</p>
+        <Link to="/signup">
+          <button className="register-btn">Register Now</button>
+        </Link>
       </div>
     </section>
   );

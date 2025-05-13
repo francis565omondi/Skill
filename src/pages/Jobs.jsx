@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import SearchBar from '../components/SearchBar';
 import Filters from '../components/Filters';
@@ -54,7 +55,9 @@ function Jobs() {
         <div className="jobs-cta-content">
           <h2>Ready to Take the Next Step?</h2>
           <p>Create your profile and start applying in minutes.</p>
-          <button>Get Started Now</button>
+          <Link to="/signup">
+            <button className="register-btn">Get Started Now</button>
+          </Link>
         </div>
       </section>
     </>
