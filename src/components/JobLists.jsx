@@ -1,15 +1,17 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
-const jobsData = [
-  { id: 1, title: 'Cleaner Needed', location: 'Nairobi' },
-  { id: 2, title: 'Experienced Plumber', location: 'Mombasa' },
-  { id: 3, title: 'Driver for Delivery Service', location: 'Kisumu' },
-];
+function JobLists({ searchTerm, selectedCategory }) {
+  const [jobs, setJobs] = useState([]);
 
-function JobLists() {
+  // Filter based on search and category
+  const filteredJobs = jobs.filter(job =>
+    job.title.toLowerCase().includes(searchTerm.toLowerCase()) &&
+    (selectedCategory === '' || job.category === selectedCategory)
+  );
+
   return (
     <section className="job-lists">
-      {jobsData.map((job) => (
+      {filteredJobs.map((job) => (
         <div key={job.id} className="job-card">
           <h4>{job.title}</h4>
           <p>{job.location}</p>

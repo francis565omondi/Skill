@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { 
-  FaBroom, FaTools, FaCar, FaBolt, FaBaby, FaLeaf, FaBriefcase 
+import {
+  FaBroom, FaTools, FaCar, FaBolt, FaBriefcase
 } from 'react-icons/fa';
 
 const jobCategories = [
@@ -32,48 +32,6 @@ const jobCategories = [
     jobs: 15,
     icon: <FaBolt />,
     route: '/jobs/electrical'
-  },
-  {
-    title: 'Baby Sitting',
-    description: 'Take care of children at home or events.',
-    jobs: 10,
-    icon: <FaBaby />,
-    route: '/jobs/babysitting'
-  },
-  {
-    title: 'Gardening',
-    description: 'Beautify lawns and maintain plants and gardens.',
-    jobs: 12,
-    icon: <FaLeaf />,
-    route: '/jobs/gardening'
-  },
-  {
-    title: 'Remote Work',
-    description: 'Work from anywhere on global tasks and projects.',
-    jobs: 27,
-    icon: <FaBriefcase />,
-    route: '/jobs/remote'
-  },
-  {
-    title: 'Translation',
-    description: 'Translate documents or interpret across languages.',
-    jobs: 14,
-    icon: <FaTools />,
-    route: '/jobs/translation'
-  },
-  {
-    title: 'IT & Tech Support',
-    description: 'Fix, support, or maintain global tech systems.',
-    jobs: 22,
-    icon: <FaBolt />,
-    route: '/jobs/it'
-  },
-  {
-    title: 'Logistics & Delivery',
-    description: 'Coordinate or carry out deliveries worldwide.',
-    jobs: 30,
-    icon: <FaCar />,
-    route: '/jobs/logistics'
   }
 ];
 
@@ -94,19 +52,10 @@ const JobCategories = () => {
             <h3>{category.title}</h3>
             <p className="description">{category.description}</p>
             <div className="job-count">
-              <FaBriefcase className="icon" /> {category.jobs} Jobs Available
+              <FaBriefcase className="icon" /> {category.jobs}
             </div>
           </div>
         ))}
-      </div>
-
-      {/* Register Now CTA */}
-      <div className="register-cta">
-        <h3>Don't see your skill listed?</h3>
-        <p>Join now and get discovered by employers looking for talent like yours.</p>
-        <Link to="/signup">
-          <button className="register-btn">Register Now</button>
-        </Link>
       </div>
     </section>
   );

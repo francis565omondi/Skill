@@ -1,66 +1,94 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { FaMapMarkerAlt, FaMoneyBillAlt, FaClock } from 'react-icons/fa';
 
-import SearchBar from '../components/SearchBar';
-import Filters from '../components/Filters';
-import JobCategories from '../components/JobCategories';
-import JobLists from '../components/JobLists';
+const sampleJobs = [
+  {
+    id: 1,
+    title: "Frontend Developer",
+    company: "TechNova Solutions",
+    location: "Remote",
+    type: "Full-Time",
+    salary: "KSh 100,000/month",
+    posted: "2 days ago"
+  },
+  {
+    id: 2,
+    title: "Electrician",
+    company: "BrightWatt Kenya",
+    location: "Nairobi",
+    type: "Part-Time",
+    salary: "KSh 35,000/month",
+    posted: "1 week ago"
+  },
+  {
+    id: 3,
+    title: "Plumber",
+    company: "FlowFix Enterprises",
+    location: "Mombasa",
+    type: "Contract",
+    salary: "KSh 30,000/project",
+    posted: "3 days ago"
+  },
+  {
+    id: 4,
+    title: "Driver",
+    company: "QuickMove Logistics",
+    location: "Kisumu",
+    type: "Full-Time",
+    salary: "KSh 50,000/month",
+    posted: "5 days ago"
+  },
+];
 
 function Jobs() {
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('');
+
+  const filteredJobs = sampleJobs.filter((job) =>
+    job.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  const handleApply = (jobId) => {
+    alert(`You have applied for job ID: ${jobId}`);
+  };
 
   return (
-    <>
-      {/* Hero Section */}
-      <section className="hero-section">
-        <div className="hero-overlay">
-          <div className="hero-content glass-effect">
-            <h1 className="hero-title typing-text">Land Your Dream Job Today</h1>
-            <p className="hero-subtitle">
-              Discover thousands of job opportunities from top companies, tailored to your skills and interests.
-            </p>
-            <div className="hero-search-wrapper">
-              <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+    <div className="jobs-container">
+      <div className="jobs-header">
+        <h1>Browse Available Jobs</h1>
+        <input
+          type="text"
+          placeholder="Search job title or company..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+      </div>
+
+      <div className="job-cards">
+        {filteredJobs.length > 0 ? (
+          filteredJobs.map((job) => (
+            <div className="job-card" key={job.id}>
+              <h2>{job.title}</h2>
+              <p className="company-name">{job.company}</p>
+              <div className="job-meta">
+                <span><FaMapMarkerAlt /> {job.location}</span>
+                <span><FaMoneyBillAlt /> {job.salary}</span>
+                <span><FaClock /> {job.posted}</span>
+              </div>
+              <button onClick={() => handleApply(job.id)}>Apply Now</button>
             </div>
-          </div>
-        </div>
-      </section>
+          ))
+        ) : (
+          <p className="no-jobs">No jobs found.</p>
+        )}
+      </div>
 
-      {/* Job Categories Section */}
-      <section className="jobs-categories">
-        <div className="jobs-categories-content">
-          <h2>Explore Job Categories</h2>
-          <p>Find jobs that match your skills and interests.</p>
-          <JobCategories setSelectedCategory={setSelectedCategory} />
-        </div>
-      </section>
-
-      {/* Filters and Listings Section */}
-      <section className="jobs-main">
-        <div className="jobs-main-content">
-          <aside className="jobs-filters">
-            <h3>Filter Jobs</h3>
-            <Filters selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
-          </aside>
-          <div className="jobs-listings">
-            <h3>Available Jobs</h3>
-            <JobLists searchTerm={searchTerm} selectedCategory={selectedCategory} />
-          </div>
-        </div>
-      </section>
-
-      {/* Call to Action Section */}
-      <section className="jobs-cta">
-        <div className="jobs-cta-content">
-          <h2>Ready to Take the Next Step?</h2>
-          <p>Create your profile and start applying in minutes.</p>
-          <Link to="/signup">
-            <button className="register-btn">Get Started Now</button>
-          </Link>
-        </div>
-      </section>
-    </>
+      {/* Chatbot */}
+      <iframe
+        className="chatbot"
+        title="SkillHub Chatbot"
+        src="https://www.chatbase.co/chatbot-iframe/YOUR_BOT_ID"
+      />
+    </div>
   );
 }
 

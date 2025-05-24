@@ -1,3 +1,517 @@
+/* src/pages/SelectSignup.css */
+
+.select-signup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  background: #f7f9fc;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.select-signup h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.signup-options {
+  display: flex;
+  gap: 2rem;
+}
+
+.btn-option {
+  padding: 1rem 2.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #4a90e2, #357ABD);
+  color: #fff;
+  box-shadow: 0 6px 15px rgba(53, 122, 189, 0.4);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+.btn-option:hover {
+  background: linear-gradient(135deg, #357ABD, #4a90e2);
+  box-shadow: 0 8px 20px rgba(53, 122, 189, 0.6);
+  transform: translateY(-3px);
+}
+
+.btn-option:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(53, 122, 189, 0.7);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .signup-options {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .btn-option {
+    width: 100%;
+  }
+}
+
+
+/*Employerdash.css*/
+.profile-section {
+  text-align: center;
+  padding: 1rem;
+}
+.profile-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+.default-icon {
+  font-size: 80px;
+  color: #ccc;
+}
+.upload-label {
+  font-size: 0.85rem;
+  cursor: pointer;
+  color: #007bff;
+}
+.stats-cards {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.card {
+  background: #f4f4f4;
+  padding: 1rem;
+  flex: 1;
+  border-radius: 8px;
+  text-align: center;
+}
+.card-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+.job-postings ul {
+  list-style: none;
+  padding-left: 0;
+}
+.job-postings li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+.btn-primary {
+  margin-top: 1.5rem;
+  background: #007bff;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+/*Applications.css*/
+.applications-page {
+  padding: 40px;
+}
+
+.applications-page h2 {
+  font-size: 28px;
+  margin-bottom: 25px;
+}
+
+.applications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.application-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+  padding: 20px;
+}
+
+.application-info h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.application-info p {
+  margin: 6px 0;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.application-status {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 0.95rem;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-transform: capitalize;
+}
+
+.application-status.pending {
+  background-color: #fef3c7;
+  color: #b45309;
+}
+
+.application-status.accepted {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.application-status.rejected {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+
+.seeker-profile {
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-top: 2rem;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.resume-upload {
+  margin-top: 1rem;
+}
+
+.resume-upload input {
+  margin-top: 0.5rem;
+}
+
+.btn-primary {
+  background: #0056b3;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/*Dashboard.css*/
+body, html, #root {
+  margin: 0; padding: 0; height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+}
+
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  margin-top: 60px; /* Match the navbar height */
+  width: 250px;
+  background: #1e293b;
+  color: white;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.sidebar h2 {
+  margin: 20px 0;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.sidebar nav ul li {
+  padding: 12px 20px;
+  border-radius: 8px;
+  margin: 5px 0;
+  transition: background 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.sidebar nav ul li.active,
+.sidebar nav ul li:hover {
+  background-color: #3b82f6;
+  font-weight: 600;
+  transform: translateX(5px);
+}
+
+/* Profile image section */
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-img,
+.default-icon {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  background-color: #cbd5e1;
+}
+
+.default-icon {
+  font-size: 90px;
+  color: #e2e8f0;
+}
+
+.upload-label {
+  display: inline-block;
+  background-color: #3b82f6;
+  padding: 6px 16px;
+  border-radius: 20px;
+  color: white;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.upload-label:hover {
+  background-color: #2563eb;
+}
+
+#upload {
+  display: none;
+}
+
+/* Main content */
+.main-content {
+  flex-grow: 1;
+  padding: 40px;
+}
+
+.header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.header p {
+  color: #666;
+  margin-bottom: 25px;
+}
+
+/* Stats cards */
+.stats-cards {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  flex: 1 1 260px;
+  background: #d7dfe2;
+  padding: 2px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+  color: #444;
+  margin: 15px 0 5px;
+  font-weight: 600;
+}
+
+.card p {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.card-icon {
+  font-size: 40px;
+  color: #3b82f6;
+}
+
+/* Buttons */
+.actions {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.actions button {
+  padding: 12px 26px;
+  margin: 10px;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #2563eb;
+}
+
+.btn-secondary {
+  background-color: #e2e8f0;
+  color: #1e293b;
+}
+
+.btn-secondary:hover {
+  background-color: #cbd5e1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dashboard {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+  }
+
+  .sidebar nav ul {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .main-content {
+    padding: 20px;
+  }
+
+  .stats-cards {
+    flex-direction: column;
+  }
+
+  .actions {
+    text-align: center;
+  }
+
+  .actions button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .profile-img,
+  .default-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .upload-label {
+    font-size: 0.65rem;
+    padding: 4px 10px;
+  }
+}
+
+
+/*Settins css*/
+.settings-section {
+  background: #fefefe;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.settings-section h3 {
+  font-weight: 600;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  font-size: 1.15rem;
+}
+
+.settings-section label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.settings-section input[type="text"],
+.settings-section input[type="email"],
+.settings-section select,
+.settings-section input[type="file"] {
+  margin-top: 6px;
+  padding: 10px 12px;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline-color: #3b82f6;
+}
+
+.settings-section input[type="checkbox"] {
+  margin-right: 8px;
+  transform: scale(1.2);
+}
+
+.settings-section p {
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: 4px;
+}
+
+.btn-secondary {
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: 600;
+  border: 2px solid #c00;
+  background: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #c00;
+  color: white;
+}
+
+
 /* Wrapper container for the search bar */
 .searchbar-container {
   display: flex;
@@ -155,16 +669,29 @@
 
 /* Navbar CSS (src/components/Navbar.css) */
 .navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 60px; /* adjust as needed */
+  background-color: #004466;
+  color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #004466;
-  color: white;
-  padding: 1rem 2rem;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  padding: 0 20px;
+  z-index: 1000;
+  box-sizing: border-box;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
+
+/*main c0ntent*/
+.main-content {
+  padding-top: 60px; /* same height as navbar */
+  flex-grow: 1;
+  padding-left: 40px; /* your existing padding */
+  padding-right: 40px;
+  padding-bottom: 40px;
+}
+
 
 .logo {
   font-size: 1.8rem;
@@ -251,7 +778,7 @@
   url('./assets/images/homepage.png'); /* adjust the path if needed */
   background-size: cover;
   background-position: center;
-  height: 70vh; /* or any other height you prefer */
+  height: 100vh; /* or any other height you prefer */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -327,183 +854,123 @@
   }
 }
 
-
-/* Jobs CSS (src/pages/Jobs.css) */
-
-.jobs-hero {
-  height: 400px;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-.jobs-hero-overlay {
-  background-color: rgba(0, 0, 0, 0.6);
+.jobs-container {
   padding: 2rem;
-  border-radius: 8px;
+  max-width: 1200px;
+  margin: auto;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.jobs-header {
   text-align: center;
-  max-width: 600px;
-  color: white;
-}
-
-.jobs-hero-overlay h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.jobs-hero-overlay p {
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
-}
-
-/* Categories Section */
-.jobs-categories {
-  background-color: #a5b7c9; /* Soft light color to blend with the site */
-  padding: 3rem 1rem;
-  text-align: center;
-  color: #c5aaaa; /* Dark text for readability */
-}
-
-/* Content inside the section */
-.jobs-categories-content {
-  position: relative;
-}
-
-/* Heading Style */
-.jobs-categories-content h2 {
-  font-size: 2rem; /* Increased size for better visibility */
-  margin-bottom: 0.5rem;
-  color: #333; /* Dark text color for better readability */
-}
-
-/* Paragraph Style */
-.jobs-categories-content p {
-  color: #555; /* Slightly lighter text color */
   margin-bottom: 2rem;
 }
 
-
-/* Main Section */
-.jobs-main {
-  background-color: #fff;
-  padding: 3rem 1rem;
-}
-
-.jobs-main-content {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-@media (min-width: 768px) {
-  .jobs-main-content {
-    flex-direction: row;
-  }
-}
-
-.jobs-filters {
-  flex: 1;
-  background-color: #f1f1f1;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.05);
-}
-
-.jobs-filters h3 {
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
-}
-
-.jobs-listings {
-  flex: 2;
-}
-
-.jobs-listings h3 {
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
+.jobs-header h1 {
+  font-size: 2rem;
   color: #333;
 }
 
-/* CTA Section */
-.jobs-cta {
-  background-color: #0d6efd;
-  padding: 4rem 1rem;
-  color: white;
-  text-align: center;
+.jobs-header input {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.6rem;
+  margin-top: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
 }
 
-.jobs-cta-content h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+/* Job cards container: no wrap, horizontal scroll */
+.job-cards {
+  display: flex;
+  flex-wrap: nowrap;        /* prevent wrapping */
+  gap: 1rem;
+  overflow-x: auto;         /* allow horizontal scroll if needed */
+  padding-bottom: 1rem;     /* some padding so scrollbar does not overlap */
+  -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+  justify-content: flex-start; /* align to left */
 }
 
-.jobs-cta-content p {
+/* Job card smaller */
+.job-card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 220px;             /* smaller width */
+  box-shadow: 0 0 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+  flex-shrink: 0;           /* prevent shrinking */
+}
+
+.job-card:hover {
+  transform: translateY(-5px);
+}
+
+.job-card h2 {
+  margin: 0;
+  color: #0056b3;
   font-size: 1.1rem;
-  margin-bottom: 2rem;
 }
 
-.jobs-cta-content button {
-  background-color: white;
-  color: #0d6efd;
-  padding: 0.75rem 1.5rem;
+.company-name {
   font-weight: bold;
+  color: #333;
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+}
+
+.job-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  color: #555;
+  margin: 0.8rem 0;
+  font-size: 0.85rem;
+}
+
+.job-card button {
+  padding: 0.5rem;
+  width: 100%;
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.jobs-cta-content button:hover {
-  background-color: #e6e6e6;
-}
-
-.hero-section {
-  position: relative;
-  background-image: url('./assets/images/bg.png');
-  background-size: cover;
-  background-position: center;
-  height: 70vh;
+  font-weight: bold;
+  font-size: 0.9rem;
   color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-color: #28a745; /* green */
+  transition: background-color 0.3s ease;
 }
 
-.hero-overlay {
-  background-color: rgba(0, 0, 0, 0.6); /* darken image for text contrast */
-  width: 100%;
-  height: 100%;
-  padding: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.job-card button.applied {
+  background-color: #007bff; /* blue */
+  cursor: default;
 }
 
-.hero-content {
+.job-card button:not(.applied):hover {
+  background-color: #218838; /* darker green */
+}
+
+.no-jobs {
   text-align: center;
-  max-width: 700px;
-  margin: auto;
+  color: #777;
 }
 
-.hero-title {
-  font-size: 3rem;
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 1rem;
-}
-
-.hero-subtitle {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
-  color: #1caa09;
-}
-
-.hero-search {
-  max-width: 500px;
-  margin: 0 auto;
+.chatbot {
+  position: fixed;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px; /* Wider for rectangle shape */
+  height: 150px;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+  z-index: 999;
+  overflow: hidden;
+  display: flex; /* Use flex correctly */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -513,7 +980,7 @@
   background-size: cover;
   background-position: center;
   position: relative;
-  height: 60vh;
+  height: 100vh;
   color: white;
   display: flex;
   align-items: center;
@@ -691,7 +1158,7 @@
 /* Contact CSS (src/pages/Contact.css) */
 .contact-section {
   background: url('./assets/images/about.png');
-  padding: 60px 20px;
+  padding: 80px 20px;
 }
 
 .contact-container {

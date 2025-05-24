@@ -3,7 +3,6 @@ import React from 'react';
 import JobCategories from '../components/JobCategories';
 import HowItWorks from '../components/HowItWorks';
 import WhyChooseUs from '../components/WhyChooseUs';
-import Testimonials from '../components/Testimonials';
 import Newsletter from '../components/Newsletter';
 
 const Home = () => {
@@ -19,7 +18,6 @@ const Home = () => {
       <JobCategories />
       <HowItWorks />
       <WhyChooseUs />
-      <Testimonials />
       <Newsletter />
     </>
   );
